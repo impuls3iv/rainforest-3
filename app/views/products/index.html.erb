@@ -6,7 +6,14 @@
 
   <p><%= f.description %></p>
 
-  <p><%= f.price_in_cents %></p>
+  <p>$<%= f.formatted_price %></p>
 
-  <%= link_to 'Edit', edit_product_path(f) %>
+  <%= link_to 'Edit', edit_product_path(f) %> | <%= link_to 'Delete', product_path(f), method: :delete %>
+<br>
+<br>
 <% end %>
+
+<br>
+<br>
+<br>
+<%= link_to 'Add New Product', new_product_path %>
