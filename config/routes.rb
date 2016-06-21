@@ -3,9 +3,13 @@ Rails.application.routes.draw do
 
 
 
+
+
   root 'products#index' #defines root of site
 
-  resources :products #all 7 CRUD methods
+  resources :products do#all 7 CRUD methods
+    resources :reviews, only: [:show, :create, :destroy]
+  end
 
   resources :users, only: [:new, :create] #2 crud methods
 
