@@ -1,0 +1,12 @@
+<h1>All Products</h1>
+
+<% @products.each do |f| %>
+
+  <p><%= f.name %></p>
+
+  <p><%= f.description %></p>
+
+  <p><%= f.price_in_cents %></p>
+
+  <%= link_to 'Edit', edit_product_path(f) %>
+<% end %>
